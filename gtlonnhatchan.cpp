@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int a[1000],n,m=a[0];
+int a[1000],n,m=a[0],m1=a[1];
 
 void nhap()
 {
@@ -25,11 +25,24 @@ void gtlonnhat()
 	   m=a[i];
 	}
     }
-	cout<<"gia tri lon nhat o vi tri chan la :"<< m;
+	cout<<"gia tri lon nhat o vi tri chan la :"<< m <<"\n";
+}
+
+void gtlonnhat1()
+{
+	for(int i=0; i<n; i++)
+	{
+		if(i%2==1&&a[i]>m1)
+		{
+			m1=a[i];
+		}
+	}
+	cout<<"gia tri lon nhat o vi tri le la :"<< m1;
 }
 
 int main()
 {
 	nhap();
 	gtlonnhat();
+	gtlonnhat1();
 }
